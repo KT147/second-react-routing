@@ -6,7 +6,8 @@ import EventsPage from "./pages/EventsPage";
 import EventsDetailPage from "./pages/EventsDetailPage";
 import NewEventPage from "./pages/NewEventPage";
 import EditEventPage from "./pages/EditEventPage";
-import MainNavigation from "./pages/MainNavigation";
+import Root from "./pages/Root";
+import Error from "./pages/Error";
 
 // 1. Add five new (dummy) page components (content can be simple <h1> elements)
 //    - HomePage
@@ -29,20 +30,18 @@ import MainNavigation from "./pages/MainNavigation";
 // BONUS: Add another (nested) layout route that adds the <EventNavigation> component above all /events... page components
 
 function App() {
-  return ( <div>
-     <MainNavigation />
-    <Routes>
+  return (
+    <div>
+      <Root />
+      <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/events" element={<EventsPage />} />
         <Route path="/events/:id" element={<EventsDetailPage />} />
         <Route path="/events/new" element={<NewEventPage />} />
         <Route path="/events/:id/edit" element={<EditEventPage />} />
+        <Route path="*" element={<Error />} />
       </Routes>
-
-  </div>)
-  }
-  export default App;
-
-
-
-
+    </div>
+  );
+}
+export default App;
