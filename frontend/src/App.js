@@ -1,5 +1,13 @@
 // Challenge / Exercise
 
+import { Route, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import EventsPage from "./pages/EventsPage";
+import EventsDetailPage from "./pages/EventsDetailPage";
+import NewEventPage from "./pages/NewEventPage";
+import EditEventPage from "./pages/EditEventPage";
+import MainNavigation from "./pages/MainNavigation";
+
 // 1. Add five new (dummy) page components (content can be simple <h1> elements)
 //    - HomePage
 //    - EventsPage
@@ -21,7 +29,20 @@
 // BONUS: Add another (nested) layout route that adds the <EventNavigation> component above all /events... page components
 
 function App() {
-  return <div></div>;
-}
+  return ( <div>
+     <MainNavigation />
+    <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/events" element={<EventsPage />} />
+        <Route path="/events/:id" element={<EventsDetailPage />} />
+        <Route path="/events/new" element={<NewEventPage />} />
+        <Route path="/events/:id/edit" element={<EditEventPage />} />
+      </Routes>
 
-export default App;
+  </div>)
+  }
+  export default App;
+
+
+
+

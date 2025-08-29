@@ -48,3 +48,21 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+button{
+  height: 50px;
+  width: 100px;
+  margin: 10px;
+  font-size: 16x;
+}
+
+.active {
+  color: red;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+ul {
+  margin-top: 50px;
+  text-align: center;
+}
