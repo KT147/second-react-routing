@@ -27,7 +27,7 @@ function EditEventPage() {
     return <p>Loading...</p>;
   }
 
-  return <EventForm event={event} />;
+  return <EventForm method="patch" event={event} />;
 }
 
 export default EditEventPage;

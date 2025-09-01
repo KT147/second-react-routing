@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import EventItem from "../components/EventItem";
+import EventsList from "../components/EventsList";
 
 function EventsDetailPage() {
   const { id } = useParams(); // võtab URL-ist id
@@ -27,7 +28,11 @@ function EventsDetailPage() {
     return <p>Loading...</p>;
   }
 
-  return <EventItem event={event} />;
+  return (
+    <>
+      <EventItem event={event} />
+    </>
+  );
 }
 
 export default EventsDetailPage;

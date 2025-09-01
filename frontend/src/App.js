@@ -8,6 +8,7 @@ import NewEventPage from "./pages/NewEventPage";
 import EditEventPage from "./pages/EditEventPage";
 import Root from "./pages/Root";
 import Error from "./pages/Error";
+import NewsletterPage from "./pages/Newsletter";
 
 // 1. Add five new (dummy) page components (content can be simple <h1> elements)
 //    - HomePage
@@ -39,6 +40,7 @@ function App() {
         <Route path="/events/:id" element={<EventsDetailPage />} />
         <Route path="/events/new" element={<NewEventPage />} />
         <Route path="/events/:id/edit" element={<EditEventPage />} />
+        <Route path="/newsletter" element={<NewsletterPage />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </div>
